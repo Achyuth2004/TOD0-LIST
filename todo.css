@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    background: #fff;
+    max-width: 540px ;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+.todo-app h2{
+    display: flex;
+    color: #002765;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+.todo-app img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    padding-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+}
+input{
+    border-style: none;
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+button{
+    border-style: none;
+    background: rgb(194, 76, 34);
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+button:hover{
+    background:rgb(137, 75, 52) ;
+}
+button:active{
+    background: black;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("images/checked.png");
+}
+ul li span{
+    position: absolute;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    right: 0px;
+    line-height: 40px;
+    color: #555;
+}
+ul li span:hover{
+    background: #decdcd;
+    border-radius: 10px;
+}
+footer{
+    font-size: 25px;
+    color: whitesmoke;
+    text-align: center;
+}
